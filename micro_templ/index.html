@@ -1,15 +1,189 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title></title>
+
+	<!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Micro-Templating</title>
+  <!--
+      __                      _____                    _____     _   _       _         
+   __|  |___ _____ ___ ___   |  _  |___ ___ ___ ___   | __  |_ _| |_| |___ _| |___ ___ 
+  |  |  | .'|     | -_|_ -|  |     | .'|  _| . |   |  |    -| | |  _| | -_| . | . | -_|
+  |_____|__,|_|_|_|___|___|  |__|__|__,|_| |___|_|_|  |__|__|___|_| |_|___|___|_  |___|
+                                                                              |___|   
+  -->
+
+	<!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,500' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Slab:300' rel='stylesheet' type='text/css'>
+
+  	<!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/style.css">
+
+	<!-- Primary Page Layout
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </head>
-<body>
+<body class="container-fluid">
+	<header class="row">
+		<h1 class="col-xs-10 col-xs-offset-1">MICRO-TEMPLATING</h1>
+	</header>
+	<main class="row">
+		<nav class="col-xs-3 navbar-fixed pull-right">
+			<ol>
+				<li><a href="#what" class="scroll">What is Micro-Templating?</a></li>
+				<li><a href="#def" class="scroll">Defintion</a></li>
+				<li><a href="#hist" class="scroll">Template Processing: A Brief History</a></li>
+				<li><a href="#feat" class="scroll">Typical Features</a></li>
+				<li><a href="#exmp" class="scroll">Examples</a></li>
+				<li><a href="#resig" class="scroll">John Resig's Templating Engine</a></li>
+				<li><a href="#sum" class="scroll">Summary</a></li>
+				<li><a href="#sources" class="scroll">Sources</a></li>
+			</ol>
+		</nav>
+		<section class="col-xs-7 col-xs-offset-1" id="what">
+			<h2>What is Micro-Templating?</h2>
+			<hr />
+			<p>What is a micro-templator?</p>
+			<p>Why would you need to use one?</p>
+		</section>
+		<section class="col-xs-7 col-xs-offset-1" id="def">
+			<h2>Defintion</h2>
+			<hr />
+			<dl>
+				<dt>template</dt>
+				<dd>something that serves as a model for others to copy</dd>
+				<dd>a preset format for a document or file, used so that the format does not have to be recreated each time it is used</dd>
+			</dl>
+		</section>
+		<section class="col-xs-7 col-xs-offset-1" id="hist">
+			<h2>Template Processing: A Brief History</h2>
+			<hr />
+			<p>template processor: software designed to combine one or more templates with a data model to produce one or more resulting documents.
+This can be server-side, client-side, edge-side, outside the server, or even in distributed systems.</p>
+			<p>Templating is opinionated! Meaning everyone and their dog has created a templating engine and they all think their's is the best.</p>
+		</section>
+		<section class="col-xs-7 col-xs-offset-1" id="feat">
+			<h2>Typical Features of Templators</h2>
+			<hr />
+			<ol>
+				<li>variables and functions</li>
+				<li>text replacement</li>
+				<li>file inclusion (transclusion)</li>
+				<li>conditional evaluation and loops</li>
+			</ol>
+		</section>
+		<section class="col-xs-7 col-xs-offset-1" id="exmp">
+			<h2>Examples</h2>
+			<hr />
+			<img class="pull-right" src="https://cloud.githubusercontent.com/assets/288977/8779228/a3cf700e-2f02-11e5-869a-300312fb7a00.gif">
+			<ol>
+				<li>Mustache (<a href="https://mustache.github.io/">mustache.github.io</a>)</li>
+				<li>Handlebars (<a href="http://handlebarsjs.com/">handlebarsjs.com</a>)</li>
+				<li>Hogan (<a href="http://twitter.github.io/hogan.js/">twitter.github.io/hogan.js/</a>)</li>
+				<li>Jade (<a href="http://jade-lang.com/">jade-lang.com</a>)</li>
+				<li>Haml (<a href="http://haml.info/">haml.info</a>)</li>
+				<li>EJS (<a href="http://www.embeddedjs.com/">embeddedjs.com</a>)</li>
+				<li>Pure (<a href="http://beebole.com/pure/">beebole.com/pure</a>)</li>
+				<li>ASP.NET (<a href="http://www.asp.net/">asp.net</a>)</li>
+				<li>Pure (<a href="http://beebole.com/pure/">beebole.com/pure</a>)</li>
+			</ol>
+		</section>
+		<section class="col-xs-7 col-xs-offset-1" id="resig">
+			<h2>John Resig's Templating Engine</h2>
+			<hr />
+			<p>John Resig - developer over at Khan Academy, creator of jQuery, spends his free time studying Ukiyo-e a.k.a. Japanese Woodblock printing.</p>
+			<p>This Micro-Templating utility comes from his book, Secrets of the Javascript Ninja</p>
+			<code>
+				<ol class="javascript" style="font-family:monospace"><li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">// Simple JavaScript Templating</div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">// John Resig - http://ejohn.org/ - MIT Licensed</div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">(function(){</div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; var cache = {};</div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; </div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; this.tmpl = function tmpl(str, data){</div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; &nbsp; // Figure out if we're getting a template, or if we need to</div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; &nbsp; // load the template - and be sure to cache the result.</div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; &nbsp; var fn = !/\W/.test(str) ?</div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; &nbsp; &nbsp; cache[str] = cache[str] ||</div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; &nbsp; &nbsp; &nbsp; tmpl(document.getElementById(str).innerHTML) :</div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; &nbsp; &nbsp; </div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; &nbsp; &nbsp; // Generate a reusable function that will serve as a template</div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; &nbsp; &nbsp; // generator (and which will be cached).</div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; &nbsp; &nbsp; new Function("obj",</div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; &nbsp; &nbsp; &nbsp; "var p=[],print=function(){p.push.apply(p,arguments);};" +</div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; &nbsp; &nbsp; &nbsp; </div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; &nbsp; &nbsp; &nbsp; // Introduce the data as local variables using with(){}</div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; &nbsp; &nbsp; &nbsp; "with(obj){p.push('" +</div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; &nbsp; &nbsp; &nbsp; </div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; &nbsp; &nbsp; &nbsp; // Convert the template into pure JavaScript</div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; &nbsp; &nbsp; &nbsp; str</div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .replace(/[\r\t\n]/g, " ")</div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .split("&lt;%").join("\t")</div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .replace(/((^|%&gt;)[^\t]*)'/g, "$1\r")</div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .replace(/\t=(.*?)%&gt;/g, "',$1,'")</div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .split("\t").join("');")</div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .split("%&gt;").join("p.push('")</div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .split("\r").join("\\'")</div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; &nbsp; &nbsp; + "');}return p.join('');");</div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; &nbsp; </div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; &nbsp; // Provide some basic currying to the user</div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; &nbsp; return data ? fn( data ) : fn;</div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; };</div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">})();</div></li>
+				</ol>
+			</code>
+			<code>
+				<ol class="html4strict" style="font-family:monospace"><li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top"><span style="color: #009900">&lt;<span style="color: #000000;font-weight: bold">script</span> <span style="color: #000066">type</span><span style="color: #66cc66">=</span><span style="color: #ff0000">"text/html"</span> <span style="color: #000066">id</span><span style="color: #66cc66">=</span><span style="color: #ff0000">"item_tmpl"</span>&gt;</span></div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; <span style="color: #009900">&lt;<span style="color: #000000;font-weight: bold">div</span> <span style="color: #000066">id</span><span style="color: #66cc66">=</span><span style="color: #ff0000">"&lt;%=id%&gt;</span></span>" class="<span style="color: #009900">&lt;%<span style="color: #66cc66">=</span><span style="color: #66cc66">(</span>i % <span style="color: #cc66cc">2</span> <span style="color: #66cc66">==</span> <span style="color: #cc66cc">1</span> ? <span style="color: #ff0000">" even"</span> : <span style="color: #ff0000">""</span><span style="color: #66cc66">)</span>%&gt;</span>"&gt;</div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; &nbsp; <span style="color: #009900">&lt;<span style="color: #000000;font-weight: bold">div</span> <span style="color: #000066">class</span><span style="color: #66cc66">=</span><span style="color: #ff0000">"grid_1 alpha right"</span>&gt;</span></div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; &nbsp; &nbsp; <span style="color: #009900">&lt;<span style="color: #000000;font-weight: bold">img</span> <span style="color: #000066">class</span><span style="color: #66cc66">=</span><span style="color: #ff0000">"righted"</span> <span style="color: #000066">src</span><span style="color: #66cc66">=</span><span style="color: #ff0000">"&lt;%=profile_image_url%&gt;</span></span>"/&gt;</div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; &nbsp; <span style="color: #009900">&lt;<span style="color: #66cc66">/</span><span style="color: #000000;font-weight: bold">div</span>&gt;</span></div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; &nbsp; <span style="color: #009900">&lt;<span style="color: #000000;font-weight: bold">div</span> <span style="color: #000066">class</span><span style="color: #66cc66">=</span><span style="color: #ff0000">"grid_6 omega contents"</span>&gt;</span></div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; &nbsp; &nbsp; <span style="color: #009900">&lt;<span style="color: #000000;font-weight: bold">p</span>&gt;&lt;<span style="color: #000000;font-weight: bold">b</span>&gt;&lt;<span style="color: #000000;font-weight: bold">a</span> <span style="color: #000066">href</span><span style="color: #66cc66">=</span><span style="color: #ff0000">"/&lt;%=from_user%&gt;</span></span>"&gt;<span style="color: #009900">&lt;%<span style="color: #66cc66">=</span>from_user%&gt;&lt;<span style="color: #66cc66">/</span><span style="color: #000000;font-weight: bold">a</span>&gt;</span>:<span style="color: #009900">&lt;<span style="color: #66cc66">/</span><span style="color: #000000;font-weight: bold">b</span>&gt;</span> <span style="color: #009900">&lt;%<span style="color: #66cc66">=</span>text%&gt;&lt;<span style="color: #66cc66">/</span><span style="color: #000000;font-weight: bold">p</span>&gt;</span></div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; &nbsp; <span style="color: #009900">&lt;<span style="color: #66cc66">/</span><span style="color: #000000;font-weight: bold">div</span>&gt;</span></div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top">&nbsp; <span style="color: #009900">&lt;<span style="color: #66cc66">/</span><span style="color: #000000;font-weight: bold">div</span>&gt;</span></div></li>
+					<li style="font-weight: normal;vertical-align:top"><div style="font: normal normal 1em/1.2em monospace;margin:0;padding:0;background:none;vertical-align:top"><span style="color: #009900">&lt;<span style="color: #66cc66">/</span><span style="color: #000000;font-weight: bold">script</span>&gt;</span></div></li>
+				</ol>
+			</code>
+			<p><a href="http://ejohn.org/blog/javascript-micro-templating/">ejohn.org/blog/javascript-micro-templating</a></p>
 
-	<ol>
-		<li>What is Micro-Templating?</li>
-		<li></li>
-		<li></li>
-		<li></li>
-	</ol>
+		</section>
+		<section class="col-xs-7 col-xs-offset-1" id="sum">
+			<h2>Summary</h2>
+			<hr />
+			<p>Helps give extra little bits of dynamic beauty to your site</p>
 
+
+		</section>
+	</main>
+	<footer class="row">
+		<div class="col-xs-7 col-xs-offset-1" id="sources">
+			<h2>Sources</h2>
+			<hr />
+			<ul>
+				<li><a href="http://ejohn.org/blog/javascript-micro-templating/">ejohn.org/blog/javascript-micro-templating</a></li>
+				<li><a href="https://www.smashingmagazine.com/2012/12/client-side-templating/">smashingmagazine.com/2012/12/client-side-templating</a></li>
+				<li><a href="http://blog.nodejitsu.com/micro-templates-are-dead/">blog.nodejitsu.com/micro-templates-are-dead</a></li>
+				<li><a href="http://mackuba.eu/2009/06/15/javascript-template-libraries/">mackuba.eu/2009/06/15/javascript-template-libraries</a></li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/JavaScript_templates">developer.mozilla.org/en-US/docs/JavaScript_templates</a></li>
+			</ul>
+		</div>
+	</footer>
+
+	<!-- SCRIPTS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src="assets/scripts.js"></script>
+
+	<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 </html>
