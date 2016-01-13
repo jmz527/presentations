@@ -16,10 +16,3 @@ $(".scroll").click(function (event) {
       hashTagActive = this.hash;
   }
 });
-
-/*
-
-Transclusions
-inclusion of part or all of an electronic document into one or more other documents by reference.
-
-*/
