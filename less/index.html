@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>LESS</title>
+  <!--
+      __                      _____                    _____     _   _       _         
+   __|  |___ _____ ___ ___   |  _  |___ ___ ___ ___   | __  |_ _| |_| |___ _| |___ ___ 
+  |  |  | .'|     | -_|_ -|  |     | .'|  _| . |   |  |    -| | |  _| | -_| . | . | -_|
+  |_____|__,|_|_|_|___|___|  |__|__|__,|_| |___|_|_|  |__|__|___|_| |_|___|___|_  |___|
+                                                                              |___|   
+  -->
+
+	<!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,500' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Slab:300' rel='stylesheet' type='text/css'>
+
+  	<!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/style.css">
+
+	<!-- Primary Page Layout
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</head>
+<body class="container-fluid">
+	<header class="row">
+		<h1 class="col-xs-10 col-xs-offset-1">LESS</h1>
+	</header>
+	<main class="row">
+		<nav class="col-xs-3 navbar-fixed pull-right">
+			<ol>
+				<li><a href="#what" class="scroll">What is LESS?</a></li>
+				<li><a href="#feat" class="scroll">Features</a></li>
+				<li><a href="#varimp" class="scroll">Variables & Importing</a></li>
+				<li><a href="#nest" class="scroll">Nesting</a></li>
+				<li><a href="#mix" class="scroll">Mixins</a></li>
+				<li><a href="#opsfun" class="scroll">Operators & Functions</a></li>
+				<li><a href="#comp" class="scroll">How to Compile</a></li>
+				<li><a href="#sum" class="scroll">Summary</a></li>
+				<li><a href="#sources" class="scroll">Sources</a></li>
+			</ol>
+		</nav>
+		<section class="col-xs-7 col-xs-offset-1" id="what">
+			<h2>What is LESS?</h2>
+			<hr />
+			<img style="background-color:#fff;" class="small pull-right" src="assets/more.jpg">
+			<div>
+				<!-- <p>Less is More.</p> -->
+				<p>Less is an open source CSS pre-processor. It looks identical to CSS, but has a ton of extra features that speed development.</p>
+				<p>It is also a command line CSS pre-processor which turns LESS files into CSS.</p>
+			</div>
+		</section>
+		<section class="col-xs-7 col-xs-offset-1" id="feat">
+			<h2>Features</h2>
+			<hr />
+			<div>
+				<p>List of features:</p>
+				<ol>
+					<li>Variables</li>
+					<li>Imports</li>
+					<li>Nesting</li>
+					<li>Mixins</li>
+					<li>Operations</li>
+					<li>Functions</li>
+					<!-- <li></li> -->
+				</ol>
+				<p>Additionally, it can be run on client side or server side. Valid CSS is valid LESS.</p>
+			</div>
+		</section>
+		<section class="col-xs-7 col-xs-offset-1" id="varimp" style="height: 1600px;">
+			<h2>Variables and Imports</h2>
+			<hr />
+			<div class="row">
+				<p class="col-xs-12">Variables allow you to pass values to assigned locations throughout your outputted CSS document.</p>
+				<img style="background-color:#fff;" class="codepics col-xs-12 pull-left" src="assets/variables.png">
+				<p class="col-xs-12">Imports you should treat exactly like includes. You are passing in that file at compile time.</p>
+				<img style="background-color:#fff;" class="codepics col-xs-12 pull-left" src="assets/importing.png">
+			</div>
+		</section>
+		<section class="col-xs-7 col-xs-offset-1" id="nest" style="height: 1300px;">
+			<h2>Nesting</h2>
+			<hr />
+			<div>
+				<p>Nesting allows you to cascade your css properties with inheritting children.</p>
+				<img style="background-color:#fff;" class="codepics pull-left" src="assets/nest.png">
+			</div>
+		</section>
+		<section class="col-xs-7 col-xs-offset-1" id="mix">
+			<h2>Mixins</h2>
+			<hr />
+			<div class="row">
+				<p class="col-xs-12">Mixins allow embedding all the properties of one class into another class.</p>
+				<p class="col-xs-12">Here is how you normally add classes to html:</p>
+				<img style="background-color:#fff;" class="codepics col-xs-12 pull-left" src="assets/mixins1.png">
+				<p class="col-xs-12">Here is how you can add classes dynamically using less:</p>
+				<img style="background-color:#fff;" class="codepics col-xs-12 pull-left" src="assets/mixins2.png">
+			</div>
+		</section>
+		<section class="col-xs-7 col-xs-offset-1" id="opsfun">
+			<h2>Operators & Functions</h2>
+			<hr />
+			<div>
+				<p>Operations bring math and calculations to your CSS.</p>
+				<p>But you are limited to numbers, colors, and variables.</p>
+				<p>Functions map one-to-one with JavaScript code, allowing manipulation of values.</p>
+			</div>
+		</section>
+		<section class="col-xs-7 col-xs-offset-1" id="comp">
+			<h2>How to Compile</h2>
+			<hr />
+			<div>
+				<p>There are many 3rd party tools that allow you to compile less. I use gulp.</p>
+				<p></p>
+			</div>
+			<a href=""><img style="background-color:#fff;" class="small pull-left" src="assets/gulp.png"></a>
+			<a href=""><img style="background-color:#fff;" class="small pull-right" src="assets/grunt.png"></a>
+		</section>
+
+		<section class="col-xs-7 col-xs-offset-1" id="sum">
+			<h2>Summary</h2>
+			<hr />
+			<p>Less is a dynamic, nested, stylesheet metalanguage with CSS-like syntax that can be compiled into CSS.</p>
+			<p>It uses Variables, Imports, Nesting, Mixins, Operations, and Functions to make your life easier.</p>
+		</section>
+	</main>
+	<footer class="row">
+		<div class="col-xs-7 col-xs-offset-1" id="sources">
+			<h2>Sources</h2>
+			<hr />
+			<ul>
+				<li><a href="http://lesscss.org/">Less website</a></li>
+				<li><a href="http://gulpjs.com/">GulpJS website</a></li>
+				<li><a href="https://github.com/less/less.js">Less.js on Github</a></li>
+				<li><a href="https://scotch.io/tutorials/getting-started-with-less">Scotch.io "getting-started-with-less" tutorial</a></li>
+				<li><a href="http://www.dotlesscss.org/">dotlesscss.org .NET port of the LESS.JS Library</a></li>
+				<li><a href="https://en.wikipedia.org/wiki/Less_(stylesheet_language)">Wikipedia entry on Less</a></li>
+			</ul>
+		</div>
+	</footer>
+
+	<!-- SCRIPTS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src="assets/scripts.js"></script>
+
+	<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
