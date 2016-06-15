@@ -1,5 +1,5 @@
 body {
-	// background: url(../assets/img/texturetastic_gray.png);
+	background: url(../assets/img/xv_@2X.png);
 	background-repeat: repeat;
 	font-family: 'Raleway', sans-serif;
 	font-size: 18px;
@@ -9,11 +9,13 @@ body {
 
 header {
 	background-color: #666;
+	background: url(../assets/img/07t2mb2.gif);
+	background-repeat: repeat;
 	height: 50vh;
 }
 
 footer {
-	background-color: #999;
+	background-color: #666;
 	height: 50vh;
 }
 
