@@ -1,0 +1,79 @@
+body {
+	// background: url(../assets/img/texturetastic_gray.png);
+	background-repeat: repeat;
+	font-family: 'Raleway', sans-serif;
+	font-size: 18px;
+	color: #000;
+	width: 100%;
+}
+
+header {
+	background-color: #666;
+	height: 50vh;
+}
+
+footer {
+	background-color: #999;
+	height: 50vh;
+}
+
+h1 {
+	color: #fff;
+	-webkit-text-stroke: 3px black;
+	margin-top: 120px;
+	font-size: 65px;
+	font-weight: 500;
+	text-align: center;
+}
+
+nav {
+	background-color: #fff;
+	border: 3px solid #000;
+	font-size: 14px;
+	padding: 10px 5px;
+}
+
+nav.navbar-fixed {
+	position: fixed;
+	top: 40vh;
+	right: 0;
+}
+
+section {
+	height: 900px;
+	padding: 10px 0;
+	margin: 30px 0;
+}
+
+section#resig {
+	height: 1700px;
+}
+
+hr {
+	border-top: 1px solid #000;
+}
+
+img {
+	border: 3px solid #000;
+	max-height: 200px;
+	margin: 15px;
+}
+
+dl {}
+
+dt { font-size: 20px; }
+
+dd { font-style: italic; }
+
+dd>b {
+	font-style: normal;
+}
+
+code { padding: 0; }
+
+code ol {
+	background-color: #fff;
+	width: 100%;
+	-webkit-margin-start: 10px;
+	-webkit-padding-start: 50px;
+}
