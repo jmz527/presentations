@@ -31,7 +31,7 @@ Prototypal Pattern             Constructor Pattern
 | 3                    | Human          | Superclass of class Man.              |
 +----------------------+----------------+---------------------------------------+
 
-As you can see in classical object-oriented programming languages objects are only abstractions (i.e. all objects have an abstraction level of 1)
+In classical object-oriented programming languages objects are only abstractions (i.e. all objects have an abstraction level of 1)
 And classes are only generalizations (i.e. all classes have an abstraction level greater than 1).
 
 
@@ -88,7 +88,7 @@ The "new" keyword binds the "this" pointer inside the constructor to a clone of 
 
 In JavaScript, you add methods and properties on the prototype property when you want instances of an object to inherit those methods and properties
 This allows us to add new methods for specific instances of objects or even overwrite the prototype all together.
-But this still only allows us one level of inheritance.
+
 JS only allows objects to delegate to one other object. However it allows you to copy the properties of an arbitrary number of objects
 In prototypal inheritance you can hand pick which properties to copy and which properties to omit from different prototypes
 
@@ -118,16 +118,17 @@ Private variables due to closures
 
 
 Terms:
-Inheritance
-Polymorphism - objects can share the same interface—how they are accessed and used—while their underlying implementation of the interface may differ
+Object Oriented Programming - Programming model organized around objects rather than "actions" and data rather than logic. Primarily used to encaspulating state.
 Encapsulation - Every Object responsible for specific tasks
-Object Oriented Programming - encaspulating state
-Delegation
-Concatenation
-Aggregation
 
 Abstraction - A general concept formed by extracting common features from specific examples
 Generalization - An abstraction of a more specific abstraction.
+
+Inheritance
+Polymorphism - objects can share the same interface — how they are accessed and used — while their underlying implementation of the interface may differ
+Delegation
+Concatenation
+Aggregation
 
 
 

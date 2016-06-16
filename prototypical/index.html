@@ -9,7 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<title>Prototypical JavaScript</title>
+	<title>JavaScript Prototypes</title>
   <!--
       __                      _____                    _____     _   _       _
    __|  |___ _____ ___ ___   |  _  |___ ___ ___ ___   | __  |_ _| |_| |___ _| |___ ___
@@ -33,54 +33,164 @@
 </head>
 <body class="container-fluid">
 	<header class="row">
-		<h1 class="col-xs-10 col-xs-offset-1">Prototypical JavaScript</h1>
+		<h1 class="col-xs-10 col-xs-offset-1">JavaScript Prototypes</h1>
 	</header>
 	<main class="row">
 		<nav class="col-xs-3 navbar-fixed pull-right">
 			<ol>
-				<li><a href="#what" class="scroll">Overview</a></li>
-				<li><a href="#def" class="scroll">Defintion</a></li>
-				<li><a href="#hist" class="scroll">A Brief History</a></li>
+				<li><a href="#overview" class="scroll">Overview</a></li>
+				<li><a href="#def" class="scroll">OOP for you and me</a></li>
+				<li><a href="#abst" class="scroll">Example of Abstraction</a></li>
+				<li><a href="#vs" class="scroll">Prototypal vs Classical</a></li>
+				<li><a href="#what" class="scroll">Prototypes in JavaScript</a></li>
+				<li><a href="#pros" class="scroll">Pros & Cons</a></li>
 				<li><a href="#exmp" class="scroll">Examples</a></li>
+				<li><a href="#dh" class="scroll">How we use it</a></li>
 				<li><a href="#sum" class="scroll">Summary</a></li>
 				<li><a href="#sources" class="scroll">Sources</a></li>
 			</ol>
 		</nav>
-		<section class="col-xs-7 col-xs-offset-1" id="what">
-			<h2>What is so prototypical about JavaScript?</h2>
+		<section class="col-xs-7 col-xs-offset-1" id="overview">
+			<h2>Overview</h2>
 			<hr />
-			<img class="pull-right" src="https://media.giphy.com/media/jcxtvm2bsZDH2/giphy.gif">
 			<div>
-				<p>Overview</p>
-				<p></p>
+				<p>In this presentation we will cover the following:</p>
+				<ul>
+					<li>We will have a summary of object oriented programming.</li>
+					<li>We will define prototypical inheritance, and look at how it differs from classical inheritance.</li>
+					<li>We will look at the two ways in which prototypical inheritance is used in JS.</li>
+					<li>We'll weigh the pros and cons of these patterns.</li>
+					<li>We will take a look at some examples.</li>
+					<li>Then, we will finish up with an overview of the Datahall's page</li>
+				</ul>
 			</div>
 		</section>
 		<section class="col-xs-7 col-xs-offset-1" id="def">
-			<h2>Defintion</h2>
+			<h2>OOP for you and me</h2>
 			<hr />
+			<img class="pull-right side-img" src="./assets/img/objs.gif">
 			<dl>
-				<dt>Thing</dt>
-				<dd><b>1.</b> something something</dd>
-				<dd><b>2.</b> something something</dd>
+				<dt>Object Oriented Programming</dt>
+				<dd><b>-</b>Programming model organized around objects rather than "actions" and data rather than logic.</dd>
 			</dl>
+			<p>OOP, put simply, is the use of objects to encapsulate state.</p>
+			<p>In OOP, we use self-contained pieces of code called Objects as the building blocks for our data.</p>
+			<p>Objects inherit methods and properties from parent objects/classes, forming a hierarchy of abstraction.</p>
+			<p>These methods and properties are used within the object to define a specific instance of whatever <i>it</i> is, typically in occordance with some real world example</p>
 		</section>
-		<section class="col-xs-7 col-xs-offset-1" id="hist">
-			<h2>A Brief History</h2>
+		<section class="col-xs-7 col-xs-offset-1" id="abst">
+			<h2>Example of a hierarchy of abstraction <img class="small" src="./assets/img/banana-019.jpg"></h2>
 			<hr />
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id atque, officiis mollitia? Nobis atque, aut fuga at provident deleniti, autem recusandae inventore adipisci debitis necessitatibus, esse est expedita unde error.</p>
+			<p>Abstraction - A general concept formed by extracting common features from specific examples</p>
+			<p>Generalization - An abstraction of a more specific abstraction.</p>
+			<div class="mxgraph" style="position:relative;overflow:auto;width:100%;">
+			<div style="width:1px;height:1px;overflow:hidden;">3VhNd9o6EP01LNuDMR9hGdKQ9pzXVRbvdalgYasRGh8hAuTXZySPsIThnPThOh+wQLqSNdKdOyPGvfRmtbvTrCx+QsZlb9DPdr30W28wSNJxij8W2VfIZDSsgFyLjCbVwL145gT2Cd2IjK+jiQZAGlHG4AKU4gsTYUxr2MbTliBjqyXLvcUauF8w2UT/FZkp6BR92p7Fv3ORF2T5MPDAFo+5ho0ic71BunSfanjF/FI0f12wDLYRtOt7KqYVsCdgQP2SqWiTzwCrCNB8fSCUFl0K2qnfJ+iMa1qXMCnUY0hbeose1gD4pG2tdjdcWi97B1aPzc+MHhjUXEW2zz5AT6zN3nuBZ+gU6oI2BeSgmLyt0ZmjmtsVkKRZYVYSmwk2+U6Y/wi27V+2/XVke8rovRuqu24UO7+5MXtSI9sYQKi2+w9ASatXO7XbO3tYfxrY6AXNwr4TMtM5p1kuKoiPOw4rjptxHpTMiKd4dUbOyQ/zajaxQYSeIZdst0uub79TckcdkUumn5jc0KJzvcGAO2Z8WwjD70vmtrzFxBmzWkom1JcHu0i1HteG+4x6hoPm6eiBwZSimhLwYEj9bZ3OEh/5RZDKxoRdpDaf3doN5UpSpDc38mZqo+stVJtTQQdqI9Oh2gCydyW2JO1SbETI5xUb/XUKxTbuSGxkOhDbjCn8rv+f3nLNuWpBcMkkFlw66lJwRMrnFZy7OGPBTToSHJkOBHddlhJLgTfV29DfaG+hNxfrJ2KwqUIpsT6yansVORrl2EIoHlEzfC01PoQvocapsqmW98HM8ChJdcpMQsViQM2fhtASlLkBCVWZmM7nffwccspF1Ix8XPh4OsGM11XITOLr7Iv+rtN2A2ruuOKaSfGMyQwoYQRE4UFxAyE3a6PhkXt2FCirraWQ8gjCNXNbrS+QGFtvzyxtAt8zXNPASmSZuyBOOQNw9lK69wMFzsNU1vCK/czx4H/DK6dKhlNe8Rq+yCnNIur6AVlmi4/mkX5/Om0tTiZXkUd8Zgg8MqEbs3WHNOuMH2ptmEI6PpA3Ws1aV8SJL3N8NgrcMW7HHdit37y5seBFa3r7Ag==</div>
+			</div>
+		</section>
+		<section class="col-xs-7 col-xs-offset-1" id="vs">
+			<h2>Prototypical Inheritance vs Classical Inheritance</h2>
+			<hr />
+			<p>In classical object-oriented programming languages, instances inherit from a blueprint (the class), and create sub-class relationships:</p>
+			<p>Objects are abstractions (only one level removed from the instance) and classes are generalizations (two or more levels removed).</p>
+			<hr />
+			<p>In prototypal object-oriented programming languages, however, we only have one type of abstraction: Objects.</p>
+			<p>An object is either an abstraction of a real world instance, or an abstraction of another object (a.k.a. a generalization) - and is thus that object's prototype.</p>
+			<p>Where in C++ you would use the "class" keyword to define a new class, in JS we just use a function</p>
+			<br />
+			<img class="center-block" src="./assets/img/you_rock_you_rule.jpg">
+		</section>
+		<section class="col-xs-7 col-xs-offset-1" id="what">
+			<h2>What is so prototypical about JavaScript?</h2>
+			<hr />
+			<p>In JS, everything is an object. Even the base data types, like "String" and "Integer." These base prototypes are how JavaScript's inherent methods work.</p>
+			<blockquote>You make prototype objects, and then...make new instances. Objects are mutable in JavaScript, so we can augment the new instances, giving them new fields and methods. These can then act as prototypes for even newer objects. We don't need classes to make lots of similar objects...Objects inherit from objects. What could be more object oriented than that?</blockquote>
+			<span>-</span><cite>Douglas Crockford</cite>
+			<br>
+			<br>
+			<p>Now within JS's prototypical paradigm there are two patterns: prototypal and constructor</p>
+			<div class="pre">
+                                   Inheritance
+                                        |
+                         +-----------------------------+
+                         |                             |
+                         v                             v
+                    Prototypal                     Classical
+                         |
+         +------------------------------+
+         |                              |
+         v                              v
+Prototypal Pattern             Constructor Pattern
+
+
+			</div>
+			<p>In prototypal, you add methods and properties on the prototype when you want instances of an object to inherit those methods and properties. By doing this, you are cloning an existing object and extend it</p>
+<!-- 			<p>This allows us to add new methods for specific instances of objects or even overwrite the prototype all together.</p> -->
+			<p>The constructor pattern in JavaScript is the prototypal pattern inverted. You create a brand new object and then copy over properties and methods from other objects selectively.</p>
+		</section>
+		<section class="col-xs-7 col-xs-offset-1" id="pros">
+			<h2>Pros & Cons</h2>
+			<hr />
+			<p>JS only allows objects to delegate to one other object. However it allows you to copy the properties of an arbitrary number of objects.</p>
+			<p>In prototypal inheritance you can hand pick which properties to copy and which properties to omit from different prototypes.</p>
+
+			<p>One of the most important advantages of prototypal inheritance is that you can add new properties to prototypes after they are created.</p>
+			<p>This allows you to add new methods to a prototype which will be automatically made available to all the objects which delegate to that prototype.</p>
+
+			<p>Multiple Inheritance. In JS you'll never hear about The Diamond Problem</p>
+			<p>Polymorphism - objects can share the same interface — how they are accessed and used — while their underlying implementation of the interface may differ</p>
 		</section>
 		<section class="col-xs-7 col-xs-offset-1" id="exmp">
 			<h2>Examples</h2>
 			<hr />
-			<ol>
-				<li>Example (<a href="https://mustache.github.io/">link.io</a>)</li>
-				<li>Example (<a href="http://handlebarsjs.com/">link</a>)</li>
-			</ol>
+			<div class="pre">
+function User (theName, theEmail) {
+    this.name = theName;
+    this.email = theEmail;
+    this.quizScores = [];
+    this.currentScore = 0;
+}
+​
+User.prototype = {
+    constructor: User,
+    saveScore:function (theScoreToAdd)  {
+        this.quizScores.push(theScoreToAdd)
+    },
+    showNameAndScores:function ()  {
+        var scores = this.quizScores.length > 0 ? this.quizScores.join(",") : "No Scores Yet";
+        return this.name + " Scores: " + scores;
+    },
+    changeEmail:function (newEmail)  {
+        this.email = newEmail;
+        return "New Email Saved: " + this.email;
+    }
+}
+
+function runUser() {
+	// A User ​
+	firstUser = new User("Richard", "Richard@examnple.com"); 
+	firstUser.changeEmail("RichardB@examnple.com");
+	firstUser.saveScore(15);
+	firstUser.saveScore(10); 
+	firstUser.showNameAndScores(); //Richard Scores: 15,10​
+	​
+	​// Another User​
+	secondUser = new User("Peter", "Peter@examnple.com");
+	secondUser.saveScore(18);
+	secondUser.showNameAndScores(); //Peter Scores: 18
+}
+			</div>
+		</section>
+		<section class="col-xs-7 col-xs-offset-1" id="dh">
+			<h2>DataHalls Object Hierarchy</h2>
+			<hr />
+			<div class="mxgraph" style="position:relative;overflow:auto;width:100%;">
+			<div style="width:1px;height:1px;overflow:hidden;">3VlBd+IsFP01LmeOMY3a5dfWtov5TuecLmZmifKa0GJeDsGq/fUl5GFgrJvW0oxuhAvhweXeB9FBernc3ChWFf8jBzkYDflmkF4NRqMkHafmq0G2LTLJzlogV4JTpw64Fy9A4JDQleBQBx01otSiCsEFliUsdIAxpXAddntAGUatWO4idsD9gsl99JfguiA0GZ93Dbcg8oJCT0fjtmHOFk+5wlVJ8Qaj9Np+2uYlc2PRQuuCcVwH0GbYVtOUgm0JSJJd9DKY5gviMgAU1DtKadQHQVOl+hwVB9VCDpOifPKJS2dmjxWiebIpLTeXIJt9dlvYPnZ9oHXHoYIyiH3wARJNrbduH4CbbaEqKl1gjiWTsw69sFxDM4Jh6aLQS2mKiSnCRujfDfw9o9of11JqtfWammrT1gzwCFpvSY9spdFAXdwfiBWN0c60md7BxRJU40otqJepWykzlQP1smsmPm4Al2AmY3dQMi2ew9EZbU6+69exaQpE6NvkUuhnJlc06F1V380fG/f8zfq6EBruK2anvTYOD5mtJBPlt1yxdgLDZ1AanPUP8LC/Qnogc+KjTJG4+trzncMKz3Jjwj5CSkJZ6ciK8/TmSexLFEeW8hVn1xxBccn0M8h15Z6Sm0Uil0J7dr6WiKpXVt6d5lGsbJk/5cODcpWvNnvpiKA2Cu2p7YppdsuaTu8R3LwZ5+OCS89CwaXDmIKjy9jpnh3kKF9wraNjXFfc/fhk7fwGu5NY5LrpnOzJ/JZ0D+SSo7NLsb1kad6P2TszZa4AyiOkyolLjV+SKunl2KPkmAL8XCnR3H0p2YttBCXt0/afqA0XvTpzzyMKySbIgJAZF7qP9orJSrJPy79jL3pJ9O1lL1YR7EWhPdpaufTJXmfTiEKiG61HyE/kvaIjm8T0FY3h51/Oe5Btsq/Mwe09KnwZBAkaekDM1C0wAjGm2v00btu8/0LS2Ss=</div>
+			</div>
 		</section>
 		<section class="col-xs-7 col-xs-offset-1" id="sum">
 			<h2>Summary</h2>
 			<hr />
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime hic odio animi eligendi perspiciatis corrupti dolorem fugiat quisquam eius voluptas! Autem aliquam rerum, minima doloremque iure est amet, facere dolore.</p>
+
 		</section>
 	</main>
 	<footer class="row">
@@ -88,8 +198,12 @@
 			<h2>Sources</h2>
 			<hr />
 			<ul>
-				<li><a href="http://ejohn.org/blog/javascript-micro-templating/">source</a></li>
-				<li><a href="https://www.smashingmagazine.com/2012/12/client-side-templating/">source</a></li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">Inheritance and the prototype chain</a></li>
+				<li><a href="http://javascript.crockford.com/javascript.html">JavaScript: The World's Most Misunderstood Programming Language</a></li>
+				<li><a href="https://medium.com/javascript-scene/common-misconceptions-about-inheritance-in-javascript-d5d9bab29b0a#.l30od6ffv">Common Misconceptions About Inheritance in JavaScript</a></li>
+				<li><a href="http://javascriptissexy.com/oop-in-javascript-what-you-need-to-know/">OOP In JavaScript: What You NEED to Know</a></li>
+				<li><a href="http://stackoverflow.com/a/19640910/4808259">Classical inheritance vs prototypal inheritance in javascript</a></li>
+				<li><a href="http://stackoverflow.com/a/16872315/4808259">Benefits of prototypical inheritance over classical?</a></li>
 			</ul>
 		</div>
 	</footer>
@@ -99,6 +213,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	<script src="assets/scripts.js"></script>
+	<script type="text/javascript" src="https://www.draw.io/js/embed-static.min.js"></script>
 
 	<!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->

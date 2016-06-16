@@ -42,13 +42,9 @@ nav.navbar-fixed {
 }
 
 section {
-	height: 900px;
+	height: 950px;
 	padding: 10px 0;
 	margin: 30px 0;
-}
-
-section#resig {
-	height: 1700px;
 }
 
 hr {
@@ -57,8 +53,6 @@ hr {
 
 img {
 	border: 3px solid #000;
-	max-height: 200px;
-	margin: 15px;
 }
 
 dl {}
@@ -78,4 +72,20 @@ code ol {
 	width: 100%;
 	-webkit-margin-start: 10px;
 	-webkit-padding-start: 50px;
+}
+
+img.side-img {
+	max-height: 200px;
+	margin: 15px;
+}
+
+img.small {
+	height: 30px;
+	border: none;
+	margin: 0;
+}
+
+div.pre {
+	font-family: monospace;
+	white-space: pre;
 }
