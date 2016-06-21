@@ -43,8 +43,9 @@
 				<li><a href="#abst" class="scroll">Example of Abstraction</a></li>
 				<li><a href="#vs" class="scroll">Prototypal vs Classical</a></li>
 				<li><a href="#what" class="scroll">Prototypes in JavaScript</a></li>
+				<li><a href="#exmp" class="scroll">Example of a Prototype</a></li>
 				<li><a href="#pros" class="scroll">Pros & Cons</a></li>
-				<li><a href="#exmp" class="scroll">Examples</a></li>
+				<li><a href="#pci" class="scroll">Parasitic Combination Inheritance</a></li>
 				<li><a href="#dh" class="scroll">How we use it</a></li>
 				<li><a href="#sum" class="scroll">Summary</a></li>
 				<li><a href="#sources" class="scroll">Sources</a></li>
@@ -102,9 +103,7 @@
 		<section class="col-xs-7 col-xs-offset-1" id="what">
 			<h2>What is so prototypical about JavaScript?</h2>
 			<hr />
-			<p>In JS, everything is an object. Even the base data types, like "String" and "Integer." These base prototypes are how JavaScript's inherent methods work.</p>
-			<blockquote>You make prototype objects, and then...make new instances. Objects are mutable in JavaScript, so we can augment the new instances, giving them new fields and methods. These can then act as prototypes for even newer objects. We don't need classes to make lots of similar objects...Objects inherit from objects. What could be more object oriented than that?</blockquote>
-			<span>-</span><cite>Douglas Crockford</cite>
+			<p>In JS, everything is an object, even the base data types like "String" and "Integer." These base prototypes are how JavaScript's inherent methods work.</p>
 			<br>
 			<br>
 			<p>Now within JS's prototypical paradigm there are two patterns: prototypal and constructor</p>
@@ -127,6 +126,11 @@ Prototypal Pattern             Constructor Pattern
 <!-- 			<p>This allows us to add new methods for specific instances of objects or even overwrite the prototype all together.</p> -->
 			<p>The constructor pattern in JavaScript is the prototypal pattern inverted. You create a brand new object and then copy over properties and methods from other objects selectively.</p>
 		</section>
+		<section class="col-xs-7 col-xs-offset-1" id="exmp">
+			<h2>Example of a Prototype</h2>
+			<hr />
+			<img src="./assets/img/pjs.png" alt="">
+		</section>
 		<section class="col-xs-7 col-xs-offset-1" id="pros">
 			<h2>Pros & Cons</h2>
 			<hr />
@@ -139,46 +143,14 @@ Prototypal Pattern             Constructor Pattern
 			<p>Multiple Inheritance. In JS you'll never hear about The Diamond Problem</p>
 			<p>Polymorphism - objects can share the same interface — how they are accessed and used — while their underlying implementation of the interface may differ</p>
 		</section>
-		<section class="col-xs-7 col-xs-offset-1" id="exmp">
-			<h2>Examples</h2>
+		<section class="col-xs-7 col-xs-offset-1" id="pci">
+			<h2>Parasitic Combination Inheritance</h2>
 			<hr />
-			<div class="pre">
-function User (theName, theEmail) {
-    this.name = theName;
-    this.email = theEmail;
-    this.quizScores = [];
-    this.currentScore = 0;
-}
-​
-User.prototype = {
-    constructor: User,
-    saveScore:function (theScoreToAdd)  {
-        this.quizScores.push(theScoreToAdd)
-    },
-    showNameAndScores:function ()  {
-        var scores = this.quizScores.length > 0 ? this.quizScores.join(",") : "No Scores Yet";
-        return this.name + " Scores: " + scores;
-    },
-    changeEmail:function (newEmail)  {
-        this.email = newEmail;
-        return "New Email Saved: " + this.email;
-    }
-}
-
-function runUser() {
-	// A User ​
-	firstUser = new User("Richard", "Richard@examnple.com"); 
-	firstUser.changeEmail("RichardB@examnple.com");
-	firstUser.saveScore(15);
-	firstUser.saveScore(10); 
-	firstUser.showNameAndScores(); //Richard Scores: 15,10​
-	​
-	​// Another User​
-	secondUser = new User("Peter", "Peter@examnple.com");
-	secondUser.saveScore(18);
-	secondUser.showNameAndScores(); //Peter Scores: 18
-}
-			</div>
+			<p>Douglas Crockford is a senior JavaScript architect at PayPal, known for JSLint and JSMin, and for popularizing the JSON format.</p>
+			<p>He invented this little extension to JavaScript's Object.create method that allows for prototypal hierarchies:</p>
+			<img src="./assets/img/pci.png" alt="">
+			<blockquote>You make prototype objects, and then...make new instances. Objects are mutable in JavaScript, so we can augment the new instances, giving them new fields and methods. These can then act as prototypes for even newer objects. We don't need classes to make lots of similar objects...Objects inherit from objects. What could be more object oriented than that?</blockquote>
+			<span>-</span><cite>Douglas Crockford</cite>
 		</section>
 		<section class="col-xs-7 col-xs-offset-1" id="dh">
 			<h2>DataHalls Object Hierarchy</h2>
@@ -200,6 +172,7 @@ function runUser() {
 			<ul>
 				<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">Inheritance and the prototype chain</a></li>
 				<li><a href="http://javascript.crockford.com/javascript.html">JavaScript: The World's Most Misunderstood Programming Language</a></li>
+				<li><a href="http://javascript.crockford.com/prototypal.html">Prototypal Inheritance in JavaScript</a></li>
 				<li><a href="https://medium.com/javascript-scene/common-misconceptions-about-inheritance-in-javascript-d5d9bab29b0a#.l30od6ffv">Common Misconceptions About Inheritance in JavaScript</a></li>
 				<li><a href="http://javascriptissexy.com/oop-in-javascript-what-you-need-to-know/">OOP In JavaScript: What You NEED to Know</a></li>
 				<li><a href="http://stackoverflow.com/a/19640910/4808259">Classical inheritance vs prototypal inheritance in javascript</a></li>
