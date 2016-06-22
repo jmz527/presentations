@@ -22,10 +22,10 @@ User.prototype = {
 
 function runUser() {
 	// A User ​
-	firstUser = new User("Richard", "Richard@examnple.com"); 
+	firstUser = new User("Richard", "Richard@examnple.com");
 	firstUser.changeEmail("RichardB@examnple.com");
 	firstUser.saveScore(15);
-	firstUser.saveScore(10); 
+	firstUser.saveScore(10);
 	firstUser.showNameAndScores(); //Richard Scores: 15,10​
 
     // Another User​

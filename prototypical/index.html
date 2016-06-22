@@ -109,9 +109,7 @@
 		<section class="col-xs-7 col-xs-offset-1" id="what">
 			<h2>What is so prototypical about JavaScript?</h2>
 			<hr />
-			<p>In JavaScript, there are no classes. Everything is an object. Even the base data types like "String" and "Number" are instances of objects. This is how JavaScript's inherent methods work.</p>
-			<br>
-			<p>Now within JS's prototypal paradigm there are two patterns of construction: prototypal and constructor</p>
+			<p>Within JS's prototypal paradigm there are two patterns of construction: prototypal and constructor</p>
 			<div class="pre">
                                    Inheritance
                                         |
@@ -127,6 +125,7 @@ Prototypal Pattern             Constructor Pattern
 
 
 			</div>
+			<p>In JavaScript, there are no classes. Everything is an object. Even the base data types like "String" and "Number" are instances of objects. This is how JavaScript's inherent methods work.</p>
 			<div class="row">
 				<div class="col-xs-6">
 					<p>In prototypal, you add methods and properties on the prototype when you want instances of an object to inherit those methods and properties. By doing this, you are cloning an existing object and extend it</p>
@@ -145,14 +144,21 @@ Prototypal Pattern             Constructor Pattern
 		<section class="col-xs-7 col-xs-offset-1" id="pros">
 			<h2>Pros & Cons</h2>
 			<hr />
-			<p>JS only allows objects to delegate to one other object. However it allows you to copy the properties of an arbitrary number of objects.</p>
-			<p>In prototypal inheritance you can hand pick which properties to copy and which properties to omit from different prototypes.</p>
 
-			<p>One of the most important advantages of prototypal inheritance is that you can add new properties to prototypes after they are created.</p>
-			<p>This allows you to add new methods to a prototype which will be automatically made available to all the objects which delegate to that prototype.</p>
+			<div class="row">
+				<div class="col-xs-6">
+					<p>One of the most important advantages of prototypal inheritance is that you can add new properties to prototypes after they are created.</p>
+					<p>This allows you to add new methods to a prototype which will be automatically made available to all delegate objects of that prototype.</p>
+					<p>In JS you'll never hear about The Diamond Problem</p>
+				</div>
+				<div class="col-xs-6">
+					<p>JavaScript only allows objects to delegate to one other object. This means you need to extend it a little if you want Multiple Inheritance.</p>
+					<p>JavaScript is confusing, it's syntax was designed for Java developers. The constructor pattern does not appeal to the classical crowd.</p>
+				</div>
+			</div>
+			<img class="pull-left" src="./assets/img/Diamond_inheritance.svg" alt="">
 
-			<p>Multiple Inheritance. In JS you'll never hear about The Diamond Problem</p>
-			<p>Polymorphism - objects can share the same interface — how they are accessed and used — while their underlying implementation of the interface may differ</p>
+
 		</section>
 		<section class="col-xs-7 col-xs-offset-1" id="pci">
 			<h2>Parasitic Combination Inheritance</h2>
@@ -169,11 +175,18 @@ Prototypal Pattern             Constructor Pattern
 			<div class="mxgraph" style="position:relative;overflow:auto;width:100%;">
 			<div style="width:1px;height:1px;overflow:hidden;">3VlBd+IsFP01LmeOMY3a5dfWtov5TuecLmZmifKa0GJeDsGq/fUl5GFgrJvW0oxuhAvhweXeB9FBernc3ChWFf8jBzkYDflmkF4NRqMkHafmq0G2LTLJzlogV4JTpw64Fy9A4JDQleBQBx01otSiCsEFliUsdIAxpXAddntAGUatWO4idsD9gsl99JfguiA0GZ93Dbcg8oJCT0fjtmHOFk+5wlVJ8Qaj9Np+2uYlc2PRQuuCcVwH0GbYVtOUgm0JSJJd9DKY5gviMgAU1DtKadQHQVOl+hwVB9VCDpOifPKJS2dmjxWiebIpLTeXIJt9dlvYPnZ9oHXHoYIyiH3wARJNrbduH4CbbaEqKl1gjiWTsw69sFxDM4Jh6aLQS2mKiSnCRujfDfw9o9of11JqtfWammrT1gzwCFpvSY9spdFAXdwfiBWN0c60md7BxRJU40otqJepWykzlQP1smsmPm4Al2AmY3dQMi2ew9EZbU6+69exaQpE6NvkUuhnJlc06F1V380fG/f8zfq6EBruK2anvTYOD5mtJBPlt1yxdgLDZ1AanPUP8LC/Qnogc+KjTJG4+trzncMKz3Jjwj5CSkJZ6ciK8/TmSexLFEeW8hVn1xxBccn0M8h15Z6Sm0Uil0J7dr6WiKpXVt6d5lGsbJk/5cODcpWvNnvpiKA2Cu2p7YppdsuaTu8R3LwZ5+OCS89CwaXDmIKjy9jpnh3kKF9wraNjXFfc/fhk7fwGu5NY5LrpnOzJ/JZ0D+SSo7NLsb1kad6P2TszZa4AyiOkyolLjV+SKunl2KPkmAL8XCnR3H0p2YttBCXt0/afqA0XvTpzzyMKySbIgJAZF7qP9orJSrJPy79jL3pJ9O1lL1YR7EWhPdpaufTJXmfTiEKiG61HyE/kvaIjm8T0FY3h51/Oe5Btsq/Mwe09KnwZBAkaekDM1C0wAjGm2v00btu8/0LS2Ss=</div>
 			</div>
+			<p>Polymorphism - objects can share the same interface (how they are accessed and used), while their underlying implementation of the interface may differ</p>
 		</section>
 		<section class="col-xs-7 col-xs-offset-1" id="sum">
 			<h2>Summary</h2>
 			<hr />
-
+				<ul>
+					<li>JavaScript is a prototype-based object oriented language. This is how it encapsulates state.</li>
+					<li>There are only objects. The prototype of an object is just another object.</li>
+					<li>You can either extend inherent JavaScript prototypes or make new ones.</li>
+					<li>JavaScript is confusing syntactically, but it has some powerful features, like adding properties and methods at runtime</li>
+					<li>Parasitic Combination Inheritance allows us to make our own prototypal inheritance structures.</li>
+				</ul>
 		</section>
 	</main>
 	<footer class="row">
