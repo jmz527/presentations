@@ -1,13 +1,10 @@
-
-
-
 function User (theName, theEmail) {
     this.name = theName;
     this.email = theEmail;
     this.quizScores = [];
     this.currentScore = 0;
 }
-​
+
 User.prototype = {
     constructor: User,
     saveScore:function (theScoreToAdd)  {
@@ -30,9 +27,11 @@ function runUser() {
 	firstUser.saveScore(15);
 	firstUser.saveScore(10); 
 	firstUser.showNameAndScores(); //Richard Scores: 15,10​
-	​
-	​// Another User​
+
+    // Another User​
 	secondUser = new User("Peter", "Peter@examnple.com");
 	secondUser.saveScore(18);
 	secondUser.showNameAndScores(); //Peter Scores: 18
 }
+
+runUser();

@@ -41,7 +41,7 @@
 				<li><a href="#overview" class="scroll">Overview</a></li>
 				<li><a href="#def" class="scroll">OOP for you and me</a></li>
 				<li><a href="#abst" class="scroll">Example of Abstraction</a></li>
-				<li><a href="#vs" class="scroll">Prototypal vs Classical</a></li>
+				<li><a href="#vs" class="scroll">Classical vs Prototypal</a></li>
 				<li><a href="#what" class="scroll">Prototypes in JavaScript</a></li>
 				<li><a href="#exmp" class="scroll">Example of a Prototype</a></li>
 				<li><a href="#pros" class="scroll">Pros & Cons</a></li>
@@ -57,9 +57,9 @@
 			<div>
 				<p>In this presentation we will cover the following:</p>
 				<ul>
-					<li>We will have a summary of object oriented programming.</li>
-					<li>We will define prototypical inheritance, and look at how it differs from classical inheritance.</li>
-					<li>We will look at the two ways in which prototypical inheritance is used in JS.</li>
+					<li>We will learn about object oriented programming.</li>
+					<li>We will define prototypal inheritance, and look at how it differs from classical inheritance.</li>
+					<li>We will look at the two ways in which prototypal inheritance is used in JS.</li>
 					<li>We'll weigh the pros and cons of these patterns.</li>
 					<li>We will take a look at some examples.</li>
 					<li>Then, we will finish up with an overview of the Datahall's page</li>
@@ -69,18 +69,18 @@
 		<section class="col-xs-7 col-xs-offset-1" id="def">
 			<h2>OOP for you and me</h2>
 			<hr />
-			<img class="pull-right side-img" src="./assets/img/objs.gif">
 			<dl>
-				<dt>Object Oriented Programming</dt>
-				<dd><b>-</b>Programming model organized around objects rather than "actions" and data rather than logic.</dd>
+				<dt>Object Oriented Programming:</dt>
+				<dd>Programming model organized around objects rather than actions, and data rather than logic.</dd>
 			</dl>
+			<img class="pull-right side-img" src="./assets/img/objs.gif">
 			<p>OOP, put simply, is the use of objects to encapsulate state.</p>
-			<p>In OOP, we use self-contained pieces of code called Objects as the building blocks for our data.</p>
-			<p>Objects inherit methods and properties from parent objects/classes, forming a hierarchy of abstraction.</p>
-			<p>These methods and properties are used within the object to define a specific instance of whatever <i>it</i> is, typically in occordance with some real world example</p>
+			<!-- <p>In OOP, we use self-contained pieces of code called Objects as the building blocks for our data.</p> -->
+			<p>Objects inherit methods and properties from parent objects/classes, forming a chain of inheritance.</p>
+			<!-- <p>These methods and properties are used within the object to define a specific instance of whatever <i>it</i> is, typically in occordance with some real world example</p> -->
 		</section>
 		<section class="col-xs-7 col-xs-offset-1" id="abst">
-			<h2>Example of a hierarchy of abstraction <img class="small" src="./assets/img/banana-019.jpg"></h2>
+			<h2>Example of the Levels of Abstraction <img class="small" src="./assets/img/banana-019.jpg"></h2>
 			<hr />
 			<p>Abstraction - A general concept formed by extracting common features from specific examples</p>
 			<p>Generalization - An abstraction of a more specific abstraction.</p>
@@ -89,24 +89,29 @@
 			</div>
 		</section>
 		<section class="col-xs-7 col-xs-offset-1" id="vs">
-			<h2>Prototypical Inheritance vs Classical Inheritance</h2>
+			<h2>Classical Inheritance vs Prototypal Inheritance</h2>
 			<hr />
-			<p>In classical object-oriented programming languages, instances inherit from a blueprint (the class), and create sub-class relationships:</p>
-			<p>Objects are abstractions (only one level removed from the instance) and classes are generalizations (two or more levels removed).</p>
-			<hr />
-			<p>In prototypal object-oriented programming languages, however, we only have one type of abstraction: Objects.</p>
-			<p>An object is either an abstraction of a real world instance, or an abstraction of another object (a.k.a. a generalization) - and is thus that object's prototype.</p>
-			<p>Where in C++ you would use the "class" keyword to define a new class, in JS we just use a function</p>
+			<div class="row">
+				<div class="col-xs-6">
+					<p>In classical object-oriented programming languages, instances inherit from a blueprint (the class), and create sub-class relationships:</p>
+					<p>Objects are abstractions (only one level removed from the instance) and classes are generalizations (two or more levels removed).</p>
+				</div>
+				<div class="col-xs-6">
+					<p>In prototypal object-oriented programming languages, however, we only have one type of abstraction: Objects.</p>
+					<p>If it is not the instantiated object, then the object is either an abstraction or a generalization of it.</p>
+					<p>When an object inherits properties and methods from another object, the object it inherits from is called the prototype</p>
+					<!-- <p>Where in C++ you would use the "class" keyword to define a new class, in JS we just use a function</p> -->
+				</div>
+			</div>
 			<br />
 			<img class="center-block" src="./assets/img/you_rock_you_rule.jpg">
 		</section>
 		<section class="col-xs-7 col-xs-offset-1" id="what">
 			<h2>What is so prototypical about JavaScript?</h2>
 			<hr />
-			<p>In JS, everything is an object, even the base data types like "String" and "Integer." These base prototypes are how JavaScript's inherent methods work.</p>
+			<p>In JavaScript, there are no classes. Everything is an object. Even the base data types like "String" and "Number" are instances of objects. This is how JavaScript's inherent methods work.</p>
 			<br>
-			<br>
-			<p>Now within JS's prototypical paradigm there are two patterns: prototypal and constructor</p>
+			<p>Now within JS's prototypal paradigm there are two patterns of construction: prototypal and constructor</p>
 			<div class="pre">
                                    Inheritance
                                         |
@@ -122,9 +127,15 @@ Prototypal Pattern             Constructor Pattern
 
 
 			</div>
-			<p>In prototypal, you add methods and properties on the prototype when you want instances of an object to inherit those methods and properties. By doing this, you are cloning an existing object and extend it</p>
+			<div class="row">
+				<div class="col-xs-6">
+					<p>In prototypal, you add methods and properties on the prototype when you want instances of an object to inherit those methods and properties. By doing this, you are cloning an existing object and extend it</p>
+				</div>
+				<div class="col-xs-6">
+					<p>The constructor pattern in JavaScript is the prototypal pattern inverted. You create a brand new object and then copy over properties and methods from other objects selectively.</p>
+				</div>
+			</div>
 <!-- 			<p>This allows us to add new methods for specific instances of objects or even overwrite the prototype all together.</p> -->
-			<p>The constructor pattern in JavaScript is the prototypal pattern inverted. You create a brand new object and then copy over properties and methods from other objects selectively.</p>
 		</section>
 		<section class="col-xs-7 col-xs-offset-1" id="exmp">
 			<h2>Example of a Prototype</h2>
